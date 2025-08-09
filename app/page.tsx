@@ -183,8 +183,14 @@ function Card({
   return <div className={`rounded-2xl border border-green-200 ${className}`}>{children}</div>;
 }
 
-function CardHeader({ children }: { children: React.ReactNode }) {
-  return <div className="p-4 pb-2">{children}</div>;
+function CardHeader({
+  children,
+  className = '',
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return <div className={`p-4 pb-2 ${className}`}>{children}</div>;
 }
 function CardTitle({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return <div className={`text-green-900 font-bold ${className}`}>{children}</div>;
@@ -192,12 +198,25 @@ function CardTitle({ children, className = '' }: { children: React.ReactNode; cl
 function CardDescription({ children }: { children: React.ReactNode }) {
   return <div className="text-green-800 text-sm">{children}</div>;
 }
-function CardContent({ children }: { children: React.ReactNode }) {
-  return <div className="px-4 pb-4">{children}</div>;
+function CardContent({
+  children,
+  className = '',
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return <div className={`px-4 pb-4 ${className}`}>{children}</div>;
 }
-function CardFooter({ children }: { children: React.ReactNode }) {
-  return <div className="px-4 pb-4">{children}</div>;
+function CardFooter({
+  children,
+  className = '',
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return <div className={`px-4 pb-4 ${className}`}>{children}</div>;
 }
+
 
 // ---------------------------------------------
 // Secciones
